@@ -9,5 +9,5 @@
     "strict": false,
     "jsx": "react-jsx"
   },
-  "include": ["api/**/*"]
+  "include": ["api/**/*.ts", "api/**/*.tsx"]
 }

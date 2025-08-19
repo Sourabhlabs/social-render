@@ -1,18 +1,16 @@
 {
   "name": "social-render",
   "version": "1.0.0",
-  "description": "Social image rendering service",
-  "main": "index.js",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "start": "vercel dev"
+    "build": "tsc -p .",
+    "start": "node server.js"
   },
   "dependencies": {
-    "@vercel/og": "^0.6.2"
+    "@vercel/og": "latest"
   },
   "devDependencies": {
-    "typescript": "^4.9.5"
-  },
-  "license": "MIT"
+    "typescript": "^5.4.0"
+  }
 }

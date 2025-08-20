@@ -1,14 +1,14 @@
 {
   "name": "social-render",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "tsc -p .",
-    "start": "node server.js"
+    "vercel-build": "tsc -p ."
   },
   "dependencies": {
-    "@vercel/og": "latest"
+    "@vercel/og": "^0.6.2"
   },
   "devDependencies": {
     "typescript": "^5.4.0"

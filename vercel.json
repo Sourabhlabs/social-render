@@ -1,0 +1,6 @@
+{
+  "functions": {
+    "api/**/*.[jt]s":  { "runtime": "edge" },
+    "api/**/*.[jt]sx": { "runtime": "edge" }
+  }
+}

@@ -1,10 +1,13 @@
 // api/post.tsx
 // Edge Function that renders a social/OG image.
-// Example: /api/post?title=Start%20Your%20Health%20Coaching%20Career&subtitle=Get%20paying%20clients%20in%2090%20days&cta=Reserve%20My%20Spot%20Now&theme=blue
+// Example:
+// /api/post?title=Start%20Your%20Health%20Coaching%20Career&subtitle=Get%20paying%20clients%20in%2090%20days&cta=Reserve%20My%20Spot%20Now&theme=blue
 
 import { ImageResponse } from '@vercel/og';
 
-export const runtime = 'edge';
+export const config = {
+  runtime: 'edge',
+};
 
 type Params = {
   title?: string;
@@ -45,7 +48,6 @@ export default async function handler(req: Request) {
   const { width, height } = sizeFromRatio(ratio);
   const t = THEMES[theme ?? 'blue'] ?? THEMES.blue;
 
-  // Simple logo/mark pill
   const Brand = (
     <div
       style={{
@@ -82,7 +84,6 @@ export default async function handler(req: Request) {
           color: t.fg,
         }}
       >
-        {/* Glow accents */}
         <div style={{
           position: 'absolute',
           inset: 0,
@@ -94,7 +95,6 @@ export default async function handler(req: Request) {
           background: `radial-gradient(500px 300px at 25% 85%, ${t.glow}, transparent 70%)`
         }} />
 
-        {/* Content grid */}
         <div style={{
           flex: 1,
           display: 'flex',
